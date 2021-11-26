@@ -3,28 +3,28 @@ html, body {
     height: 100%;
 }
 
-p {
+p, li {
     font-family: Rubik;
     font-size: 80%;
     letter-spacing: 2px;
     color: #DEEFFFFF;
-    text-shadow: 0px 0px 16px #20AEC460;
+    text-shadow: 0px 0px 8px #20AEC460, 0px 0px 16px #000000FF;
 }
 
 h1, h2 {
     font-family: Jura;
     color: #DEEFFF;
     text-align: center;
-    text-shadow: 0px 0px 8px #000000FF;
+    text-shadow: 0px 0px 16px #20AEC4A0, 0px 0px 32px #000000FF, 0px 0px 32px #000000FF;
 }
 
 h1 {
-    letter-spacing: 15px;
+    letter-spacing: 10px;
     font-size: 250%;
 }
 
 h2 {
-    letter-spacing: 12px;
+    letter-spacing: 8px;
     font-size: 150%;
 }
 
@@ -42,7 +42,7 @@ a {
     color: #DEEFFFFF;
     text-decoration: none;
     animation-name: blink;
-    animation-duration: 0.75s;
+    animation-duration: 1.2s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
@@ -85,7 +85,7 @@ a:hover {
 .container {
     position: relative;
     width: 100%;
-    border-spacing: 0px 60px;
+    border-spacing: 0px 100px;
     position: absolute;
     top: 0;
     right: 0;
@@ -125,6 +125,29 @@ a:hover {
     margin-top: -100px;
     position: relative;
     z-index: 1;
+}
+
+.mediacontainer {
+    border-spacing: 0px 20px;
+    width: 100%;
+    height: auto;
+}
+
+.media td {
+    vertical-align: top;
+}
+
+.media td img {
+    image-rendering: pixelated;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 #AE588413, 0 6px 20px 0 #5869AE13;
+    width: 75%;
+    height: auto;
+}
+
+.media td p {
+    text-align: justify;
+    text-justify: inter-character;
 }
 
 .purple {

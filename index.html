@@ -29,15 +29,14 @@
                     <h2>Synopsis</h2>
                     <p>
                         <span class="purple">Fantasy Jump</span> is a prototype game made by <a href="https://github.com/GlennFolker">Glenn</a>
-                        in participation of a school literary project. It is a simple playable framework featuring a <span class="blue">blue
+                        in participation of a school literary project. It is a simple video game featuring a <span class="blue">blue
                         jumper ball</span>, several floating <span class="pink">spike balls</span>, and the <span class="purple">"Leaks."</span>
                         
                         The artwork is mostly 2D. Sprites are rendered 3 times bigger, making it having the pixel-y effect. Controls are mostly
                         using mouse, with keyboard keys just used to either exit the game or toggle fullscreen.
                         
-                        The <a href="https://github.com/GlennFolker/FantasyJump">game</a> itself is done in 30 days. You can download the Windows
-                        x64 release <a href="https://github.com/GlennFolker/FantasyJump/releases/download/v1.0.0/FantasyJump-Windows-x64.zip">
-                        here</a>!
+                        The game itself is done in 30 days. You can download the Windows x64 release
+                        <a href="https://github.com/GlennFolker/FantasyJump/releases/download/v1.0.0/FantasyJump-Windows-x64.zip"> here</a>!
                     </p>
                 </td>
             </tr>
@@ -63,10 +62,64 @@
             
             <tr>
                 <td class="cell">
-                    <h2>How it's made</h2>
+                    <h2>How it's Made</h2>
                     <p>
-                        
+                        <a href="https://github.com/GlennFolker/FantasyJump">FantasyJump</a> v1.0.0 is written in <a href="https://www.cplusplus.com/">
+                        C++</a>, compiled and linked with <a href="https://en.cppreference.com/w/cpp/17">Standard C++ 17</a> libraries, and using
+                        <a href="https://www.opengl.org/">OpenGL</a> as the graphics manager. As for the external libraries, I used:
                     </p>
+                    
+                    <ul>
+                        <li><a href="http://glew.sourceforge.net/">GLEW</a> for wrangling newer OpenGL features to be used with OpenGL 3.0.0.</li>
+                        <li><a href="https://github.com/g-truc/glm">GLM</a> for fast inlined mathematics around OpenGL functions.</li>
+                        <li><a href="https://www.libsdl.org/">SDL2</a> as the main framework.</li>
+                        <li><a href="https://www.libsdl.org/projects/SDL_image/">SDL2_image</a> for reading image files and turn them into in-memory pixel maps.</li>
+                        <li><a href="https://www.libsdl.org/projects/SDL_mixer/">SDL2_mixer</a> for playing the audio chunks; in this case I used Vorbis to load the audios.</li>
+                        <li><a href="https://xiph.org/vorbis/">Vorbis</a> for reading <a href="https://en.wikipedia.org/wiki/Ogg">OGG</a> audio files and turn them into in-memory playable audio chunks.</li>
+                        <li><a href="https://github.com/skypjack/entt">EnTT</a> as the main library for managing <a href="https://en.wikipedia.org/wiki/Entity_component_system">Entity Component System</a>.</li>
+                        <li><a href="https://box2d.org/">Box2D</a> as the main 2-dimensional physics engine.</li>
+                    </ul>
+                    
+                    <p>
+                        You can hypothetically use any C/CXX compiler to build this project, since I used <a href="https://cmake.org/">CMake</a> as
+                        the building toolchain here. I highly recommend using <a href="https://www.mingw-w64.org/">MinGW</a> for developers on Windows though.
+                    </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="cell">
+                    <h2>Inside the Game</h2>
+                    <table class="mediacontainer">
+                        <tr class="media">
+                            <td><img src="instruction.png"></td>
+                            <td><p>
+                                The instruction dialog that appears when you run the game. This is only shown once per session.
+                            </p></td>
+                        </tr>
+                        
+                        <tr class="media">
+                            <td><img src="spike-balls.png"></td>
+                            <td><p>
+                                Here is what your typical first scene would be. A lonesome fantasy world, filled with several floating
+                                <span class="pink">spike balls</span> that can damage you, where you live as a bouncing <span class="blue">
+                                blue ball</span>.
+                            </p></td>
+                        </tr>
+                        
+                        <tr class="media">
+                            <td><img src="leak-encounter.png"></td>
+                            <td><p>
+                                The <span class="purple">Leak</span> is seen here, along with the sentient bullet entities it shoots. Tough
+                                enemy, might take a while to defeat it. Don't give up!
+                            </p></td>
+                        </tr>
+                        
+                        <tr class="media">
+                            <td><img src="leak-death.png"></td>
+                            <td><p class="pink">Boom.</p></td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>
