@@ -1,0 +1,140 @@
+html, body {
+    background-color: #0B0518FF;
+    height: 100%;
+}
+
+p {
+    font-family: Rubik;
+    font-size: 80%;
+    letter-spacing: 2px;
+    color: #DEEFFFFF;
+    text-shadow: 0px 0px 16px #20AEC460;
+}
+
+h1, h2 {
+    font-family: Jura;
+    color: #DEEFFF;
+    text-align: center;
+    text-shadow: 0px 0px 8px #000000FF;
+}
+
+h1 {
+    letter-spacing: 15px;
+    font-size: 250%;
+}
+
+h2 {
+    letter-spacing: 12px;
+    font-size: 150%;
+}
+
+@keyframes blink {
+    from {
+        color: #BF6995FF;
+    }
+    
+    to {
+        color: #697ABFFF;
+    }
+}
+
+a {
+    color: #DEEFFFFF;
+    text-decoration: none;
+    animation-name: blink;
+    animation-duration: 0.75s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+
+.background1 {
+    image-rendering: pixelated;
+    background-image: url("background-1.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 976px auto;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.background2 {
+    image-rendering: pixelated;
+    background-image: url("background-2.png");
+    background-size: 640px auto;
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    border-spacing: 0px 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.cell {
+    background-color: #00000080;
+    padding: 10px;
+}
+
+.cell p {
+    padding: 5px;
+    text-indent: 50px;
+    text-align: justify;
+    text-justify: inter-character;
+}
+
+.imagedef {
+    image-rendering: pixelated;
+}
+
+.logo {
+    position: relative;
+    text-align: center;
+    vertical-align: center;
+}
+
+.logo img {
+    width: 480px;
+    height: auto;
+    position: relative;
+}
+
+.logo h1 {
+    margin-top: -100px;
+    position: relative;
+    z-index: 1;
+}
+
+.purple {
+    color: #BF6995FF;
+}
+
+.blue {
+    color: #697ABFFF;
+}
+
+.pink {
+    color: #DB7D8CFF;
+}
